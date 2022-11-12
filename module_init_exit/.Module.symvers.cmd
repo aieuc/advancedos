@@ -1,1 +1,0 @@
-cmd_/home/kylin/advancedos/module_init_exit/Module.symvers := sed 's/\.ko$$/\.o/' /home/kylin/advancedos/module_init_exit/modules.order | scripts/mod/modpost -m -a  -o /home/kylin/advancedos/module_init_exit/Module.symvers -e -i Module.symvers   -T -
