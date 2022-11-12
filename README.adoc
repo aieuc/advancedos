@@ -6,8 +6,10 @@
 [source, bash]
 .*Compile Customized Module*
 ----
-cd module_init_exit
-make
+cd module_init_exit && make
+
+$ ls -l hello.ko 
+-rw-rw-r-- 1 kylin kylin 61808 11月 12 20:08 hello.ko
 ----
 
 [source, bash]
