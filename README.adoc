@@ -1,2 +1,36 @@
 = Advanced Operating System
+:toc: manual
+
+== Load Customized Module
+
+[source, bash]
+.*Compile Customized Module*
+----
+cd module_init_exit
+make
+----
+
+[source, bash]
+.*Load Module*
+----
+sudo insmod hello.ko 
+
+$ lsmod | grep hello
+hello                  16384  0
+
+$ sudo dmesg 
+...
+[ 1397.918296] Hello World
+----
+
+[source, bash]
+.*Remove Module*
+----
+sudo rmmod hello 
+
+$ sudo dmesg 
+...
+[ 1397.918296] Hello World
+[ 1605.954382] Goodbye
+----
 

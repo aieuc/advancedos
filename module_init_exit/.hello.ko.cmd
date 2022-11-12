@@ -1,0 +1,1 @@
+cmd_/home/kylin/advancedos/module_init_exit/hello.ko := ld -r -m elf_x86_64 --build-id=sha1  -T scripts/module.lds -o /home/kylin/advancedos/module_init_exit/hello.ko /home/kylin/advancedos/module_init_exit/hello.o /home/kylin/advancedos/module_init_exit/hello.mod.o;  true
