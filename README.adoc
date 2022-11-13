@@ -36,3 +36,16 @@ $ sudo dmesg
 [ 1605.954382] Goodbye
 ----
 
+== Address Translation
+
+=== 程序的编译、汇编、链接、装载、执行
+
+[source, bash]
+.*编译、汇编、链接、装载、执行*
+----
+cd addr-trans/hello/ && gcc -S hello.c -o hello.s
+gcc -c hello.s -o hello.o
+gcc hello.c -o hello.out
+./hello.out
+objdump -d hello.out
+----
