@@ -1,0 +1,1 @@
+cmd_/home/kylin/advancedos/addr-trans/vaddr2paddr/Module.symvers := sed 's/\.ko$$/\.o/' /home/kylin/advancedos/addr-trans/vaddr2paddr/modules.order | scripts/mod/modpost -m -a  -o /home/kylin/advancedos/addr-trans/vaddr2paddr/Module.symvers -e -i Module.symvers   -T -

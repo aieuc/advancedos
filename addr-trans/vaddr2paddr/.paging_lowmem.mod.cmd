@@ -1,0 +1,1 @@
+cmd_/home/kylin/advancedos/addr-trans/vaddr2paddr/paging_lowmem.mod := { echo  /home/kylin/advancedos/addr-trans/vaddr2paddr/paging_lowmem.o;  echo; } > /home/kylin/advancedos/addr-trans/vaddr2paddr/paging_lowmem.mod

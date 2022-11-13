@@ -1,0 +1,1 @@
+cmd_/home/kylin/advancedos/addr-trans/vaddr2paddr/paging_lowmem.ko := ld -r -m elf_x86_64 --build-id=sha1  -T scripts/module.lds -o /home/kylin/advancedos/addr-trans/vaddr2paddr/paging_lowmem.ko /home/kylin/advancedos/addr-trans/vaddr2paddr/paging_lowmem.o /home/kylin/advancedos/addr-trans/vaddr2paddr/paging_lowmem.mod.o;  true

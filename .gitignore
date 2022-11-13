@@ -25,3 +25,7 @@ hs_err_pid*
 *.out
 *.s
 *.o
+*.mod
+*.ko
+*.order
+*.symvers

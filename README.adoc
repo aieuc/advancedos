@@ -49,3 +49,49 @@ gcc hello.c -o hello.out
 ./hello.out
 objdump -d hello.out
 ----
+
+=== Virtual Address to Pysical Address
+
+[source, bash]
+.*Compile Customized Module*
+----
+cd addr-trans/vaddr2paddr/ && make
+
+$ ls -l paging_lowmem.ko
+-rw-rw-r-- 1 kylin kylin 239432 11月 13 23:40 paging_lowmem.ko
+----
+
+[source, bash]
+.*Load Module*
+----
+sudo insmod paging_lowmem.ko
+
+$ lsmod | grep paging_lowmem
+paging_lowmem          16384  1
+
+$ sudo dmesg 
+[  173.506219] vaddr to paddr module is running..
+[  173.506221] cr0 = 0x80050033, cr3 = 0x105d38000
+[  173.506222] PGDIR_SHIFT = 39
+[  173.506223] P4D_SHIFT = 39
+[  173.506223] PUD_SHIFT = 30
+[  173.506224] PMD_SHIFT = 21
+[  173.506224] PAGE_SHIFT = 12
+[  173.506225] PTRS_PER_PGD = 512
+[  173.506225] PTRS_PER_P4D = 1
+[  173.506226] PTRS_PER_PUD = 512
+[  173.506227] PTRS_PER_PMD = 512
+[  173.506227] PTRS_PER_PTE = 512
+[  173.506228] PAGE_MASK = 0xfffffffffffff000
+
+[  173.506229] get_page_vaddr=0xffff9802c9765000
+[  173.506230] pgd_val = 0x90802067, pgd_index = 304
+[  173.506231] p4d_val = 0x90802067, p4d_index = 0
+[  173.506232] pud_val = 0x100bab063, pud_index = 11
+[  173.506233] pmd_val = 0x1040cd063, pmd_index = 75
+[  173.506234] pte_val = 0x8000000109765163, ptd_index = 357
+[  173.506234] page_addr = 8000000109765000, page_offset = 0
+[  173.506235] vaddr = ffff9802c9765000, paddr = 8000000109765000
+----
+
+
